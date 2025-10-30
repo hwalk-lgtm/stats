@@ -239,16 +239,7 @@ class TestIntegrationScenarios(unittest.TestCase):
             income_change, tree_cover
         )
         
-        # Only indices 0, 3, 7 have complete data in both variables
-        # Wait, let me recount:
-        # Index 0: 100, 0.5 - complete
-        # Index 1: 200, nan - incomplete
-        # Index 2: nan, 0.7 - incomplete
-        # Index 3: 400, 0.8 - complete
-        # Index 4: 500, nan - incomplete
-        # Index 5: 600, 0.9 - complete
-        # Index 6: nan, 0.95 - incomplete
-        # Index 7: 800, 1.0 - complete
+        # Indices 0, 3, 5, and 7 have complete data in both variables
         self.assertEqual(result['n_effective'], 4)
         self.assertEqual(result['n_total'], 8)
         

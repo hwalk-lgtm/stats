@@ -145,9 +145,10 @@ Suppose you're studying the relationship between income change and tree cover:
 
 Your effective sample size for multivariate analysis is:
 - n_total = 100
-- n_effective = 100 - 15 - 20 - 10 = 55
+- n_missing = 15 + 20 - 10 = 25 (using inclusion-exclusion principle)
+- n_effective = 100 - 25 = 75
 
-(Note: If some households are missing both variables, they're only counted once in the missing total)
+(Note: The 10 households missing both variables are already included in both the 15 and 20 counts, so we subtract them once to avoid double-counting)
 
 ## Functions
 
